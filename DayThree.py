@@ -1,3 +1,5 @@
+# Advent of Code 2023, Day Three. 
+
 def getNumber(line, index) -> list[int]:
     start = findStart(line, index-1)
     end = findEnd(line, index+1)
@@ -22,10 +24,10 @@ def generateString(character, times):
     return output
 
 def checkGear(lines, gearRow, gearCol):
-    return (len(getAdjacentValues(lines, gearRow, gearCol)) == 2)
+    return (len(getAdjacentValues(lines, gearRow, gearCol, False)) == 2)
 
 def getGearRatio(lines, gearRow, gearCol):
-    gearValues = getAdjacentValues(lines, gearRow, gearCol)
+    gearValues = getAdjacentValues(lines, gearRow, gearCol, False)
     return gearValues[0] * gearValues[1]
 
 def getAdjacentValues(lines, centerRow, centerCol, replace):
@@ -71,27 +73,29 @@ def main():
 
     # print(lines[0][139])
     partNumbers = []
+    gearRatios = []
 
     for lineNum in range(len(lines)):
-        lastChar = '.'
-        lineStarts = []
-        lineEnds = []
         testLine = lines[lineNum]
         index = 0
         while index < len(testLine):
             # Part One Code
             if testLine[index].isnumeric() == False and testLine[index] != '.':
                 # Symbol Found, do Things with it, For Part One... 
-                adjValues = getAdjacentValues(lines, lineNum, index, True)
+                adjValues = getAdjacentValues(lines, lineNum, index, False)
                 for val in adjValues:
                     partNumbers.append(val)
             
             # Part Two Code
-            
+            if testLine[index] == '*':
+                if checkGear(lines, lineNum, index):
+                    gearRatios.append(getGearRatio(lines, lineNum, index))
 
             index += 1
-    print(partNumbers)
+    # print(partNumbers)
     print(sum(partNumbers))
+    print(gearRatios)
+    print(sum(gearRatios))
 
     dataFile.close()
 
