@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 4
-Part Ones Finished: 2
-Part Twos Finished: 2
-Days Completed: 2 (Last: 12/2)
+Stars Earned: 6
+Part Ones Finished: 3
+Part Twos Finished: 3
+Days Completed: 3 (Last: 12/3)
 ```
 ## Day One
 > Language: Python
@@ -37,3 +37,13 @@ Part Two:
 
 
 ## Day Three
+> Language: Python
+> Finished: 7:40 AM 12/3/2023
+> Finished Both Parts
+
+### Problem Summary
+**Part One**
+> Given an input consisting of numbers and symbols, find the missing part numbers. Missing part numbers are numbers adjacent to some symbol (not including .). Find the sum of the missing part numbers.
+
+**Part Two**
+> Given the same input, find missing gears and their ratios. A gear is defined as any * symbol with exactly 2 values adjacent to it. The ratio is those numbers multiplied together. Sum up the ratios to get the final answer

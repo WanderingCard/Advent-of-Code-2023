@@ -94,7 +94,7 @@ def main():
             index += 1
     # print(partNumbers)
     print(sum(partNumbers))
-    print(gearRatios)
+    # print(gearRatios)
     print(sum(gearRatios))
 
     dataFile.close()
