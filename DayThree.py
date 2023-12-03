@@ -79,38 +79,16 @@ def main():
         testLine = lines[lineNum]
         index = 0
         while index < len(testLine):
+            # Part One Code
             if testLine[index].isnumeric() == False and testLine[index] != '.':
-                # Symbol Found, do Things with it
+                # Symbol Found, do Things with it, For Part One... 
+                adjValues = getAdjacentValues(lines, lineNum, index, True)
+                for val in adjValues:
+                    partNumbers.append(val)
+            
+            # Part Two Code
+            
 
-                print("Symbol Found in line", lineNum, "index:", index)
-
-                checkRow = lineNum - 1 if lineNum > 0 else lineNum
-                while checkRow <= min(len(lines), lineNum + 1):
-                    checkCol = index - 1 if index > 0 else index
-                    while checkCol <= min(len(testLine), index + 1):
-                        if lines[checkRow][checkCol].isnumeric():
-
-                            print("\tNumber found in line", checkRow, "at spot", checkCol)
-
-                            # Get Number and Info
-                            outputData = getNumber(lines[checkRow], checkCol)
-                            startIndex = outputData[0]
-                            endIndex = outputData[1]
-                            value = outputData[2]
-
-                            # Remove Value from String
-                            periodString = generateString('.', endIndex - startIndex + 1)
-                            removeLine = lines[checkRow][:startIndex] + periodString + lines[checkRow][endIndex+1:]
-                            lines[checkRow] = removeLine
-
-                            # Add Value to Part List
-                            partNumbers.append(value)
-
-                            # Change CheckRow to end Value
-                            checkCol = endIndex + 1
-                        else:
-                            checkCol += 1
-                    checkRow += 1
             index += 1
     print(partNumbers)
     print(sum(partNumbers))
