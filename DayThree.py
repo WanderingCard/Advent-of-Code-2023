@@ -1,3 +1,5 @@
+# Advent of Code 2023, Day Three. 
+
 def getNumber(line, index) -> list[int]:
     start = findStart(line, index-1)
     end = findEnd(line, index+1)
@@ -22,10 +24,10 @@ def generateString(character, times):
     return output
 
 def checkGear(lines, gearRow, gearCol):
-    return (len(getAdjacentValues(lines, gearRow, gearCol)) == 2)
+    return (len(getAdjacentValues(lines, gearRow, gearCol, False)) == 2)
 
 def getGearRatio(lines, gearRow, gearCol):
-    gearValues = getAdjacentValues(lines, gearRow, gearCol)
+    gearValues = getAdjacentValues(lines, gearRow, gearCol, False)
     return gearValues[0] * gearValues[1]
 
 def getAdjacentValues(lines, centerRow, centerCol, replace):
@@ -71,49 +73,29 @@ def main():
 
     # print(lines[0][139])
     partNumbers = []
+    gearRatios = []
 
     for lineNum in range(len(lines)):
-        lastChar = '.'
-        lineStarts = []
-        lineEnds = []
         testLine = lines[lineNum]
         index = 0
         while index < len(testLine):
+            # Part One Code
             if testLine[index].isnumeric() == False and testLine[index] != '.':
-                # Symbol Found, do Things with it
+                # Symbol Found, do Things with it, For Part One... 
+                adjValues = getAdjacentValues(lines, lineNum, index, False)
+                for val in adjValues:
+                    partNumbers.append(val)
+            
+            # Part Two Code
+            if testLine[index] == '*':
+                if checkGear(lines, lineNum, index):
+                    gearRatios.append(getGearRatio(lines, lineNum, index))
 
-                print("Symbol Found in line", lineNum, "index:", index)
-
-                checkRow = lineNum - 1 if lineNum > 0 else lineNum
-                while checkRow <= min(len(lines), lineNum + 1):
-                    checkCol = index - 1 if index > 0 else index
-                    while checkCol <= min(len(testLine), index + 1):
-                        if lines[checkRow][checkCol].isnumeric():
-
-                            print("\tNumber found in line", checkRow, "at spot", checkCol)
-
-                            # Get Number and Info
-                            outputData = getNumber(lines[checkRow], checkCol)
-                            startIndex = outputData[0]
-                            endIndex = outputData[1]
-                            value = outputData[2]
-
-                            # Remove Value from String
-                            periodString = generateString('.', endIndex - startIndex + 1)
-                            removeLine = lines[checkRow][:startIndex] + periodString + lines[checkRow][endIndex+1:]
-                            lines[checkRow] = removeLine
-
-                            # Add Value to Part List
-                            partNumbers.append(value)
-
-                            # Change CheckRow to end Value
-                            checkCol = endIndex + 1
-                        else:
-                            checkCol += 1
-                    checkRow += 1
             index += 1
-    print(partNumbers)
+    # print(partNumbers)
     print(sum(partNumbers))
+    print(gearRatios)
+    print(sum(gearRatios))
 
     dataFile.close()
 
