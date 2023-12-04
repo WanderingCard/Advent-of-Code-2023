@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 6
-Part Ones Finished: 3
-Part Twos Finished: 3
-Days Completed: 3 (Last: 12/3)
+Stars Earned: 8
+Part Ones Finished: 4
+Part Twos Finished: 4
+Days Completed: 4 (Last: 12/4)
 ```
 ## Day One
 > Language: Python
@@ -38,7 +38,9 @@ Part Two:
 
 ## Day Three
 > Language: Python
+
 > Finished: 7:40 AM 12/3/2023
+
 > Finished Both Parts
 
 ### Problem Summary
@@ -47,3 +49,17 @@ Part Two:
 
 **Part Two**
 > Given the same input, find missing gears and their ratios. A gear is defined as any * symbol with exactly 2 values adjacent to it. The ratio is those numbers multiplied together. Sum up the ratios to get the final answer
+
+## Day Four
+> Language: Python
+
+> Finished: 6:36 AM 12/4/2023
+
+> Finished Both Parts
+
+### Problem Summary
+**Part One**
+> Given a set of inputs representing scratchoff cards, with a set of winning numbers and card numbers, figure out the total points won amongst the entire stack of cards. Each match of a card number with a winning number (regardless of points) counts towards the points total for the card, which is 2^matches-1
+
+**Part Two**
+> For each match in the data set, you get a duplicate of a subsequent card, I.E 3 matches results in a duplicate of the next three cards being added to the pile, each copy and original of the card generates the duplicates. Figure out the total number of cards that will be played when all copies and originals are finished. 
