@@ -1,4 +1,4 @@
-# Advent of Code Day Five
+# Advent of Code Day Five Part One
 
 import string
 
