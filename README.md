@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 8
-Part Ones Finished: 4
-Part Twos Finished: 4
-Days Completed: 4 (Last: 12/4)
+Stars Earned: 10
+Part Ones Finished: 5
+Part Twos Finished: 5
+Days Completed: 5 (Last: 12/5)
 ```
 ## Day One
 > Language: Python
@@ -63,3 +63,17 @@ Part Two:
 
 **Part Two**
 > For each match in the data set, you get a duplicate of a subsequent card, I.E 3 matches results in a duplicate of the next three cards being added to the pile, each copy and original of the card generates the duplicates. Figure out the total number of cards that will be played when all copies and originals are finished. 
+
+# Day Five
+> Language: Python
+
+> Finished: 2:00 PM 12/5/2023
+
+> Finished Both Parts
+
+### Problem Summary
+**Part One**
+> You are given an input containing data on a list of seeds and various conversion rates, using this data convert the seeds through the various tables into a location value, find the lowest location value
+
+**Part Two**
+> Now the seed values are pairs representing ranges of seeds, find the lowest value out of the initial seeds.
