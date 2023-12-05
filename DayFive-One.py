@@ -23,19 +23,6 @@ def main():
 
     # print(seeds)
 
-    # Part Two Segment
-
-    # index = 0
-    # finalSeedRange = []
-    # while index < len(seeds):
-    #     for i in range(seeds[index + 1]):
-    #         finalSeedRange.append(seeds[index] + i)
-    #     index += 2
-    # seeds = finalSeedRange
-    # print("Seeds Generated")
-
-    # End Part Two Segment
-
     needToChange = seeds
     changed = []
     skipNext = True
