@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 10
-Part Ones Finished: 5
-Part Twos Finished: 5
-Days Completed: 5 (Last: 12/5)
+Stars Earned: 12
+Part Ones Finished: 6
+Part Twos Finished: 6
+Days Completed: 6 (Last: 12/6)
 ```
 ## Day One
 > Language: Python
@@ -77,3 +77,17 @@ Part Two:
 
 **Part Two**
 > Now the seed values are pairs representing ranges of seeds, find the lowest value out of the initial seeds.
+
+# Day Six
+> Language: Python
+
+> Finished: 10:00 PM 12/6/2023
+
+> Finished Both Parts
+
+## Problem Summary
+
+**Part One**
+> You have a toy boat, who's speed over the time it runs is based on how long you hold the launch button. Given an input list of record times and a input list of race distances, figure out how many different hold times you can use to break the record for each race, and multiply those answers together for the final answer
+
+> Instead of multiple races the time and distance inputs are for one race, figure out how many different ways the race can be won.
