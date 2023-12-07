@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 12
-Part Ones Finished: 6
-Part Twos Finished: 6
-Days Completed: 6 (Last: 12/6)
+Stars Earned: 14
+Part Ones Finished: 7
+Part Twos Finished: 7
+Days Completed: 7 (Last: 12/7)
 ```
 ## Day One
 > Language: Python
@@ -91,3 +91,18 @@ Part Two:
 > You have a toy boat, who's speed over the time it runs is based on how long you hold the launch button. Given an input list of record times and a input list of race distances, figure out how many different hold times you can use to break the record for each race, and multiply those answers together for the final answer
 
 > Instead of multiple races the time and distance inputs are for one race, figure out how many different ways the race can be won.
+
+# Day Seven
+> Language: Python
+
+> Finished: 7:54 AM 12/7/2023
+
+> Finsihed Both Parts
+
+## Problem Summary
+
+**Part One**
+> Playing a game of Camel Cards! The input consists of a 5-card hand (T representing Ten) and a bid, for each hand figure out 1 what type of hand it is (Five of a Kind, Four of a Kind, Full House, Three of a Kind, Two Pairs, Pair, High) and what rank it is based on the value of the cards starting at the first and going on (Aces High) for each card its score is equal to its rank * bid, sum up the bids for the result
+
+**Part Two**
+> This time Js are not Jacks but Jokers, Jokers are wild, but for the purpose of sorting, they do not count as the card they are pretending to be (I.E AAJAA is four of a kind but the Joker is still a Joker not an Ace). Jokers are also ranked lower than twos for the purposes of balance, find the new total score from your hands
