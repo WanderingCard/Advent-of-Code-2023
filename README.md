@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 14
-Part Ones Finished: 7
-Part Twos Finished: 7
-Days Completed: 7 (Last: 12/7)
+Stars Earned: 16
+Part Ones Finished: 8
+Part Twos Finished: 8
+Days Completed: 8 (Last: 12/8)
 ```
 ## Day One
 > Language: Python
@@ -106,3 +106,19 @@ Part Two:
 
 **Part Two**
 > This time Js are not Jacks but Jokers, Jokers are wild, but for the purpose of sorting, they do not count as the card they are pretending to be (I.E AAJAA is four of a kind but the Joker is still a Joker not an Ace). Jokers are also ranked lower than twos for the purposes of balance, find the new total score from your hands
+
+## Day Eight
+
+> Language: Python
+
+> Finished 10:18 PM 12/8/2023
+
+> Finished Both Parts
+
+### Problem Summary
+
+**Part One**
+> Given a list of nodes and nodes they are connected to, one on the right, another on the left, along with a pattern of left and right moves, determine how many moves are needed to get from node AAA to node BBB
+
+**Part Two**
+> Same Challenge as above, but now you are considering multiple starting nodes (any ending in A) and multiple ending nodes(B) and figure out how many moves it takes so that you end up on all ending nodes from an original starting node at the same time.
