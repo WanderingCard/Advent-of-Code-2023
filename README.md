@@ -1,10 +1,10 @@
 # Advent of Code 2023
 Overall Statistics:
 ```
-Stars Earned: 16
-Part Ones Finished: 8
-Part Twos Finished: 8
-Days Completed: 8 (Last: 12/8)
+Stars Earned: 18
+Part Ones Finished: 9 (Last: Day 9)
+Part Twos Finished: 9 (Last: Day 9)
+Days Completed: 9 (Last: Day 9)
 ```
 ## Day One
 > Language: Python
@@ -122,3 +122,18 @@ Part Two:
 
 **Part Two**
 > Same Challenge as above, but now you are considering multiple starting nodes (any ending in A) and multiple ending nodes(B) and figure out how many moves it takes so that you end up on all ending nodes from an original starting node at the same time.
+
+## Day Nine
+> Language: Python
+
+> Finished: 6:58 AM 12/9/2023
+
+> Finished Both Parts
+
+### Problem Summary
+
+**Part One**
+> Each line of the input data represents historical data for an oasis, predict the next value of the data. Calculate the differences between each of the data points in the line, then calculate the differences between those differences and so on until you get to a line of differences of only 0s, then work backwards and predict the next value, sum all predicted values
+
+**Part Two**
+> Same as above, except you are predicting values in the past, same method of getting the differences
