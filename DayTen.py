@@ -30,7 +30,7 @@ def canMoveLeft(map, row, col):
         return True
     return False
 
-def countMoves(map, row, col, lastDirection):
+def countMoves(map, row, col, markLoop):
     moveUpSymbols = ['|', 'L', 'J']
     moveLeftSymbols = ['-', 'J', '7']
     moveRightSymbols = ['-', 'L', 'F']
@@ -40,6 +40,11 @@ def countMoves(map, row, col, lastDirection):
     currentRow = row
     currentCol = col
     lastDirection = 'NA'
+
+    markedMap = []
+    for line in map:
+        copyRow = line.copy()
+        markedMap.append(copyRow)
 
     while map[currentRow][currentCol] != 'S' or lastDirection == 'NA':
         if map[currentRow][currentCol] == 'S':
@@ -92,6 +97,9 @@ def countMoves(map, row, col, lastDirection):
                 # print("Move", moves, "Left from", currentRow, currentCol+1, "to", currentRow, currentCol)
                 moves += 1
                 # return 1 + countMoves(map, row, col-1, 'L')
+        markedMap[currentRow][currentCol] = 'O'
+    if markLoop:
+        return [moves, markedMap]
     return moves
 
 def main():
@@ -111,17 +119,30 @@ def main():
     printArray(moveArray)
     print("Start Row:", startRow, "; Start Col:", startCol)
 
-    curRowOne = startRow
-    curRowTwo = startRow
-    curColOne = startCol
-    curColTwo = startCol
+    # curRowOne = startRow
+    # curRowTwo = startRow
+    # curColOne = startCol
+    # curColTwo = startCol
 
-    sourceDirOne = "NA"
-    sourceColOne = "NA"
+    # sourceDirOne = "NA"
+    # sourceColOne = "NA"
 
-    moves = countMoves(moveArray, startRow, startCol, 'NA')
+    moves = countMoves(moveArray, startRow, startCol, False)
     print(moves)
 
+    moveOut = countMoves(moveArray, startRow, startCol, True)[1]
+
+    outFile = open('TenOut.txt', 'w', encoding='UTF-8')
+
+    for line in moveOut:
+        lineString = ""
+        for i in line:
+            lineString += i + " "
+        outFile.write(lineString + "\n")
+
+    # Generated a map with the loop and spaces labeled, attempted to count via sheet, worked, do not have the sheet scripts included.
+
+    outFile.close()
     dataFile.close()
 
     return
